@@ -1,0 +1,174 @@
+#ioModalSettingsBox{
+	position:fixed;
+	left:0px; right:0px; top:0px; bottom:0px;
+	z-index:99998;
+	background: rgba(0,0,0,0);
+	-webkit-transition:background 0.5s ease;
+	-moz-transition:background 0.5s ease;
+	-o-transition:background 0.5s ease;
+	-ms-transition:background 0.5s ease;
+	transition:background 0.5s ease;
+	user-select: text!important;
+    -webkit-user-select: text!important;
+    -moz-user-select: text!important;
+    -ms-user-select: text!important;
+}
+#ioModalSettingsBox ::-webkit-scrollbar{height:10px;width:10px; background-color:#edeef2; }
+#ioModalSettingsBox ::-webkit-scrollbar-button{height:0;width:0}
+#ioModalSettingsBox ::-webkit-scrollbar-thumb{
+	background-clip:padding-box;
+    background-color: #C4C7D2;
+	border:2px solid transparent;
+	-webkit-border-radius:6px;border-radius:6px;
+}
+#ioModalSettingsBox ::-webkit-scrollbar-thumb:hover,
+#ioModalSettingsBox ::-webkit-scrollbar-thumb:active{background-color: #848484;}
+#ioModalSettingsBox ::-webkit-scrollbar-track{
+	background-color: #edeef2;
+}
+
+#ioModalSettingsBox.show{
+	background: rgba(0,0,0,0.55);
+}
+#ioModalSettingsBox>.view{
+	position:absolute;
+	width:0px;
+	right:0px; top:32px; bottom:0px; 
+	background:#edeef2;
+	overflow:hidden;
+	-webkit-transition:width 0.5s ease;
+	-moz-transition:width 0.5s ease;
+	-o-transition:width 0.5s ease;
+	-ms-transition:width 0.5s ease;
+	transition:width 0.5s ease;
+}
+#ioModalSettingsBox>.view>.inner{
+	height:100%;
+	overflow:auto;
+}
+#ioModalSettingsBox.show>.view,#ioModalSettingsBox>.view>.inner{
+	width:450px;
+}
+@media (max-width: 991px) {
+	#ioModalSettingsBox{
+		z-index:100000;
+	}
+	#ioModalSettingsBox.show{
+			background: #262a2d;
+	}
+	#ioModalSettingsBox:before{
+		position:absolute;
+		display:block;
+		content: "\f106";
+		font: normal normal normal 14px/1 FontAwesome;
+		font-size: 36px;
+		height:50px;
+		width:50px;
+		margin-left:-25px;
+		left:50%;
+		bottom:0px;
+		color:#f0f5fa;
+		text-align:center;
+		line-height:49px;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		opacity:0;
+		-webkit-transition:opacity 0.5s ease;
+		-moz-transition:opacity 0.5s ease;
+		-o-transition:opacity 0.5s ease;
+		-ms-transition:opacity 0.5s ease;
+		transition:opacity 0.5s ease;
+	}
+	#ioModalSettingsBox.show:before{
+		opacity:1;
+	}
+	#ioModalSettingsBox ::-webkit-scrollbar{height:0px;width:0px;}
+	#ioModalSettingsBox>.view>.inner{
+		-webkit-overflow-scrolling: touch;
+		width:100vw;
+	}
+	#ioModalSettingsBox>.view{
+		top: 0px;
+		bottom:50px;
+	}
+	#ioModalSettingsBox.show>.view{
+		width:100%;
+	}
+	#ioModalSettingsBox>.close{
+		display:none;
+	}
+}
+#ioModalSettingsBox>.close{
+	position:absolute;
+	right:0px;
+	top:32px;
+	height:50px; width:50px;
+	cursor:pointer;
+	opacity:0;
+	-webkit-transition:right 0.5s ease,opacity 0.5s ease;
+	-moz-transition:right 0.5s ease,opacity 0.5s ease;
+	-o-transition:right 0.5s ease,opacity 0.5s ease;
+	-ms-transition:right 0.5s ease,opacity 0.5s ease;
+	transition:right 0.5s ease,opacity 0.5s ease;
+}
+#ioModalSettingsBox>.close:before{
+	content:'';
+    position: absolute;
+    display: block;
+    background-color:#bcbcbc;
+    height: 3px;
+    width: 36px;
+    top: 23px;
+    left: 7px;
+	border-radius: 3px;
+	transform: rotate3d(0, 0, 1, 45deg);s
+    -webkit-transform: rotate3d(0, 0, 1, 45deg);
+    -moz-transform: rotate3d(0, 0, 1, 45deg);
+    -ms-transform: rotate3d(0, 0, 1, 45deg);
+    -o-transform: rotate3d(0, 0, 1, 45deg);
+}
+#ioModalSettingsBox>.close:after{
+	content:'';
+    position: absolute;
+    display: block;
+    background-color:#bcbcbc;
+    height: 3px;
+    width: 36px;
+    top: 23px;
+    left: 7px;
+	border-radius: 3px;
+    transform: rotate3d(0, 0, 1, -45deg);
+    -webkit-transform: rotate3d(0, 0, 1, -45deg);
+    -moz-transform: rotate3d(0, 0, 1, -45deg);
+    -ms-transform: rotate3d(0, 0, 1, -45deg);
+    -o-transform: rotate3d(0, 0, 1, -45deg);
+}
+#ioModalSettingsBox>.close:before,#ioModalSettingsBox>.close:after{
+	-webkit-transition:background-color 0.5s ease;
+	-moz-transition:background-color 0.5s ease;
+	-o-transition:background-color 0.5s ease;
+	-ms-transition:background-color 0.5s ease;
+	transition:background-color 0.5s ease;
+}
+#ioModalSettingsBox.show>.close{
+	right:450px;
+	opacity:1;
+}
+#ioModalSettingsBox.show>.close:hover{
+	opacity:1;
+	background-color:rgba(0,0,0,0.25);
+}
+#ioModalSettingsBox.show>.close:hover:before{
+    background-color:#d7d7d7;
+}
+#ioModalSettingsBox.show>.close:hover:after{
+    background-color:#d7d7d7;
+}
+#ioModalSettingsBox #ioModalSettings{text-align:left;}
+#ioModalSettingsBox #ioModalSettings>.loadingImpuls{
+	position:relative;
+	width:176px;
+	height:28px;
+	margin:auto;
+}

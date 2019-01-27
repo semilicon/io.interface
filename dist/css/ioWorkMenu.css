@@ -1,0 +1,264 @@
+.ioWrapper.ioActiveWorkMenu {
+    padding-left: 250px;
+}
+.ioWorkMenuToggle{display:none!important;}
+@media (max-width: 991px) {
+	.ioWrapper.ioActiveWorkMenu {
+		padding-left:0px!important;
+	}
+	.ioWrapper.ioActiveWorkMenu .ioWorkMenuToggle{
+		display:block!important;
+	}
+	body.ioShowWorkMenu .ioWorkMenuToggle>a{
+		background: #32373c;
+		color: #00b9eb;
+	}
+}
+.ioWorkMenu{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:250px;
+	min-height: 100%;
+	background: #3b3d46;
+	color:#BDC1CA;
+}
+.pinnedWorkMenu{
+	background: #3b3d46;
+	width:inherit;
+}
+@media (max-width: 991px) {
+	.ioWorkMenu{
+		width:100%!important;
+		z-index:999;
+		position:fixed;
+		top:32px;
+		bottom:0px;
+		left:-100%;
+		right:auto;
+		min-height:0px;
+		overflow:auto;
+		-webkit-overflow-scrolling: touch;
+		top: -38px;
+		padding-bottom: 70px;
+		transform: translateY(70px);
+		-webkit-transition:all 0.15s ease;
+		-moz-transition:all 0.15s ease;
+		-o-transition:all 0.15s ease;
+		-ms-transition:all 0.15s ease;
+		transition:all 0.15s ease;
+	}
+	.pinnedWorkMenu{
+		position:static!important;
+	}
+	body.ioShowWorkMenu .ioWorkMenu{
+		left:0px;
+	}
+}
+.ioMenuContent{
+	display:block;
+	float:left;
+	width: 100%;
+	position:relative;
+	min-height:100%;
+}
+.ioMenuContent iomenu{ display:block;}
+.ioWorkMenu .button.back{
+	color:#cacce0!important;
+}
+/*-------------links---------------*/
+.ioWorkMenu a{
+	color:#ffffff;
+}
+.ioWorkMenu a:hover{
+	color: #ffffff;
+}
+/*-------------BUTTONS.workMenu---------------*/
+.ioWorkMenu button,
+.ioWorkMenu .button,
+.ioWorkMenu input[type=button],
+.ioWorkMenu input[type=submit]{
+	display:block;
+}
+/*-------------label---------------*/
+.ioWorkMenu label{
+    color: #ffffff;
+	display:block;
+	padding-top: 5px;
+}
+/*-------------h*---------------*/
+.ioWorkMenu h1, .ioWorkMenu h2, .ioWorkMenu h3, .ioWorkMenu h4, .ioWorkMenu h5 {
+	color: #DBDDF4;
+	text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6);
+	border-bottom: solid 5px #797890;
+}
+/*-------------items---------------*/
+.ioWorkMenu .item{
+	background-color:transparent;
+	opacity:1;
+	border:none;
+}
+
+.ioWorkMenu .item:first-child{
+	border-top: 2px solid #41444c;
+}
+.ioWorkMenu .item:last-child{
+	border-bottom: 2px solid #41444c;
+}
+.ioWorkMenu a.item{
+	display: block;
+	position:relative;
+	border-top: 1px solid #41444c;
+	border-bottom: 1px solid #41444c;
+	vertical-align: middle;
+	color: #BDC1CA;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 5px 10px;
+}
+.ioWorkMenu a.item:hover{
+	background: #33363d;
+	color: #FFFFFF;
+}
+.ioWorkMenu :not(a).item{
+	display: block;
+	position:relative;
+	border-top: 1px solid #41444c;
+	border-bottom: 1px solid #41444c;
+	vertical-align: middle;
+	color: #BDC1CA;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 5px 10px;
+}
+
+.ioWorkMenu :not(a).item>handle{
+	display: block;
+	position:relative;
+	margin:-5px -10px;
+}
+.ioWorkMenu *[onsort]>.item{
+	padding-right:29px;
+}
+.ioWorkMenu *[onsort]>:not(a).item>a:not(.button){
+	padding-right:29px;
+	margin-right:-29px
+}
+.ioWorkMenu *[onsort]>:not(a).item>handle{
+	margin-right:-29px;
+}
+.ioWorkMenu *[onsort]>:not(a).item>handle>a:not(.button){
+	padding-right:29px;
+}
+
+.ioWorkMenu :not(a).item>a:not(.button),
+.ioWorkMenu :not(a).item>handle>a:not(.button){
+	display: block;
+	color: #BDC1CA;
+	text-decoration: none;
+	cursor:pointer;
+	margin:-5px -10px;
+	padding: 5px 10px;
+}
+.ioWorkMenu :not(a).item>handle>a:not(.button){
+	margin:0;
+}
+.ioWorkMenu :not(a).item:hover>a:not(.button),
+.ioWorkMenu :not(a).item:hover>handle>a:not(.button){
+	background: #33363d;
+	color: #FFFFFF;
+}
+.ioWorkMenu :not(a).item>button,
+.ioWorkMenu :not(a).item>handle>button{
+	position:absolute;
+	left:0px;
+	top: 50%;
+	margin-top:-13px;
+	display:block;
+	width:26px;
+	height:26px;
+    line-height: 26px;
+	padding:0;
+	text-transform:none;
+    font-size: 18px;
+    text-decoration: none;
+    color: #FFFFFF;
+    text-shadow: none;
+    text-align: center;
+    background-color:transparent;
+    cursor: pointer;
+    font-style: normal;
+    font-variant: normal;
+    font-weight:lighter;
+    font-family: "Open Sans",sans-serif;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.ioWorkMenu :not(a).item>button:hover,
+.ioWorkMenu :not(a).item>handle>button:hover {
+    background-color:#3b618a;
+}
+.ioWorkMenu .item .child-items{margin-right:-10px; margin-bottom:-5px; margin-top:5px;border-left: 2px solid #41444c;}
+.ioWorkMenu *[onsort]>.item .child-items{margin-right:-29px;}
+/*-------------ul>li---------------*/
+.ioWorkMenu ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+	border-top: 1px solid #41444c;
+	border-bottom: 1px solid #41444c;
+}
+.ioWorkMenu ul>li{
+	display: block;
+	position:relative;
+	border-top: 1px solid #41444c;
+	border-bottom: 1px solid #41444c;
+	vertical-align: middle;
+	color: #BDC1CA;
+	font-size: 14px;
+	line-height: 16px;
+	padding: 5px 10px;
+}
+.ioWorkMenu ul>li>a{
+	display: block;
+	color: #BDC1CA;
+	text-decoration: none;
+	cursor:pointer;
+	margin:-5px -10px;
+	padding: 5px 10px;
+}
+.ioWorkMenu ul>li:hover>a{
+	background: #33363d;
+	color: #FFFFFF;
+}
+.ioWorkMenu ul[onsort]>li{
+	padding-right:29px;
+}
+.ioWorkMenu ul[onsort]>li>a{
+	padding-right:29px;
+	margin-right:-29px;
+}
+/*-------------a.handle---------------*/
+.ioWorkMenu ul>li>handle{
+	display: block;
+	position:relative;
+	margin:-5px -10px;
+}
+.ioWorkMenu ul[onsort]>li>handle{
+	margin-right:-29px;
+}
+.ioWorkMenu ul>li>handle>a{
+	display: block;
+	color: #BDC1CA;
+	text-decoration: none;
+	cursor:pointer;
+	padding: 5px 10px;
+}
+.ioWorkMenu ul[onsort]>li>handle>a{
+	padding-right:29px;
+}
+/*-------------io.draggable---------------*/
+.ioWorkMenu .io_drag_hand{
+	right:2px;
+}

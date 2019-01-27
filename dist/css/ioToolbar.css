@@ -1,0 +1,82 @@
+toolbar,toolbarbottom{
+	z-index:11;
+	position:absolute;
+	left:0px;
+	right:0px;
+	width: 100%;
+	visibility:hidden;
+}
+toolbar{
+	top:0px;
+}
+toolbarbottom{
+	bottom:0px;
+}
+toolbar>.inner,toolbarbottom>.inner{
+	position:fixed;
+	width:inherit;
+	color: #f1f1f1;
+}
+toolbar>.inner{
+	visibility:visible;
+	top:32px;
+	background-color: #3b3d46;
+	min-height:26px;
+}
+toolbarbottom>.inner{
+	visibility:;
+	bottom:0px;
+	background-color: #262a2d;
+	min-height:26px;
+}
+.ioWrapper.ioActiveWorkMenu toolbarbottom>.inner{
+	background-color: #3b3d46;
+}
+@media (max-width: 991px) {
+	toolbar,toolbarbottom{
+		position:fixed;
+		left:0px;
+		right:0px;
+		overflow:auto;
+		overflow-y:hidden;
+		overflow-x:scroll;
+		-webkit-overflow-scrolling:auto;
+		height:26px;
+		visibility:visible;
+		background-color: #3b3d46;
+	}
+	toolbar{
+		top:32px;
+	}
+	toolbarbottom{
+		bottom:0px;
+	}
+	toolbar>.inner,
+	toolbarbottom>.inner{
+		position:static;
+		top:auto;
+		bottom:auto;
+		white-space: nowrap;
+		width:auto!important;
+		background-color: #3b3d46;
+		display: inline-block;
+	}
+	toolbarbottom{
+		background-color: #262a2d;
+	}
+	toolbarbottom>.inner{
+		background-color: #262a2d;
+	}
+	.ioWrapper.ioActiveWorkMenu toolbarbottom>.inner{
+		background-color: #262a2d;
+	}
+	toolbar::-webkit-scrollbar{height:0px;width:0px;}
+	toolbarbottom::-webkit-scrollbar{height:0px;width:0px;}
+	toolbar *[left],
+	toolbarbottom *[left],
+	toolbar *[right],
+	toolbarbottom *[right]{
+		float:none;
+		display:inline-block;
+	}
+}

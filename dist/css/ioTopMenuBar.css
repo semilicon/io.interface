@@ -1,0 +1,116 @@
+html{
+	padding-top: 32px;
+}
+.ioTopMenuBar{
+    height: 32px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    background: #262a2d;
+	color: #f0f5fa;
+	font-weight:400;
+	text-align: left;
+	font-size:13px;
+}
+.ioTopMenuBar ul{
+	margin: 0;
+	padding: 0;
+	background:none;
+	position: relative;
+	text-indent:0;
+	list-style: none;
+	clear:none;
+}
+.ioTopMenuBar ul.ioBarLeft{float:left;}
+.ioTopMenuBar ul.ioBarRight{float: right;}
+.ioTopMenuBar ul li {
+    color: #f0f5fa;
+	float:left;
+	position: relative;
+}
+.ioTopMenuBar ul.ioBarRight>li {
+    color: #f0f5fa;
+	float: right;
+}
+.ioTopMenuBar ul>li a {
+    color: #f0f5fa;
+	height: 32px;
+	line-height:32px;
+    display: block;
+    padding: 0 10px;
+    margin: 0;
+	text-decoration:none;
+	cursor: pointer;
+}
+.ioTopMenuBar ul>li>ul{
+	display:block;
+	opacity: 0;
+    visibility: hidden;
+	position:absolute;
+	top:100%;
+	left:0px;
+	width: 160px;
+	padding:0px;
+	z-index: 99999;
+	background-color: #32373c;
+}
+.ioTopMenuBar ul.ioBarRight>li>ul{
+	left:auto;
+	right:0px;
+}
+.ioTopMenuBar ul>li>ul>li{
+    display: block;
+	float:none;
+}
+.ioTopMenuBar ul>li>ul>li>a{
+	height:auto;
+	font-size:13px;
+	line-height: 1.2;
+	padding: 6px 10px;
+    display: block;
+}
+.ioTopMenuBar ul>li>ul>li:first-child{margin-top:4px;}
+.ioTopMenuBar ul>li>ul>li:last-child{margin-bottom:4px;}
+.ioTopMenuBar ul>li.hover>a {
+	background: #32373c;
+	color: #00b9eb;
+}
+@media (min-width: 992px) {
+	.ioTopMenuBar ul>li:hover>a {
+		background: #32373c;
+		color: #00b9eb;
+	}
+}
+.ioTopMenuBar ul>li.hover>ul{
+	opacity: 1; top:100%;
+    visibility:visible;
+}
+.ioTopMenuBar ul>li a i.fa{font-size:20px;margin-top:6px;}
+.ioTopMenuBar ul>li a span{ 
+	display: block;
+    height: 32px;
+    float: left;
+}
+@media (max-width: 991px) {
+.ioTopMenuBar ul>li a span{ 
+	max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+}
+.ioTopMenuBar ul>li a span+span{
+	margin-left:4px;
+}
+.ioTopMenuBar ul>li>ul>li.ioCreator>a{
+	text-align: center;
+	font-size: 10px;
+	padding: 6px 10px 0px 10px;
+	color: #9a9a9a;
+}
+.ioTopMenuBar ul>li>ul>li.ioCreator:hover>a {
+    background: #32373c;
+    color: #00b9eb;
+}

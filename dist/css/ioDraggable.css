@@ -1,0 +1,9 @@
+.io_drag {position:relative;z-index:1;}
+.io_dragActive {position:relative; z-index:2;}
+.io_drag_hand{ position:absolute; right:10px; top:50%; margin-top:-13px; height:25px; width:25px;display:block; cursor:pointer;
+text-align:center; font-size: 21px; color: #FFFFFF; padding-top: 2px;
+}
+.ioWorkMenu .io_dragActive {background-color:#eeeeee; color: #FFFFFF; background: #33363d;}
+
+  
+  

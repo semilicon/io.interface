@@ -1,0 +1,19 @@
+.ioContainer settings{display:none;}
+
+.ioTopMenuBar #ioSettings{
+	background-color: #f1f1f1;
+	color: #000000;
+}
+.ioTopMenuBar #ioSettings a{
+	color: #262a2d;
+}
+body.ioSettingsShow #ioSettings>a{
+	background-color: #e0e2e8;
+	color: #00b9eb;
+}
+@media (min-width: 992px) {
+	.ioTopMenuBar #ioSettings:hover>a{
+		background-color: #e0e2e8;
+		color: #00b9eb;
+	}
+}

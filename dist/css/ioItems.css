@@ -1,0 +1,169 @@
+/*-------------ITEMs---------------*/
+.item{
+	display:block;
+	position:relative;
+	background-color: #fff;
+    opacity: 1;
+    border: none;
+    border: 1px solid #fff;
+	border-bottom: 1px solid #C4C7D2;
+    padding: 2px;
+	line-height:26px;
+	color: #666666;
+}
+.item:last-child{
+    border-bottom: 1px solid #fff;
+}
+.item.selected{
+	background: #ebebeb;
+    border: 1px solid #ebebeb;
+	border-bottom: 1px solid #C4C7D2;
+}
+.item.selected:last-child{
+    border-bottom: 1px solid #ebebeb;
+}
+.item:hover,.item.selected:hover{
+    border: 1px solid #7bb0ff;
+}
+.item>.inner{
+	display:table;
+	width:100%;
+    margin:0;
+    padding:0;
+    min-height: 26px;
+	line-height:26px;
+    border: none;
+}
+.item>.inner>.col{
+	display: table-cell;
+	width:auto;
+	vertical-align:middle;
+	line-height: 1em;
+	position:relative;
+}
+.item>.inner>.col>.inner{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	display:block;
+}
+.item input[type=checkbox] {
+	border: 1px solid #e6e6e6;
+	background: #f1f1f1;
+	border-radius: 4px;
+	width:22px;
+	height:22px;
+	line-height: 21px;
+	font-size:16px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.item input[type=checkbox]:checked{
+	border: 1px solid #C4C7D2;
+	background: #fff;
+}
+.item input[type=checkbox]:checked:before{
+	content: "\f00c";
+	margin: -3px 0 0 0px;
+	font: normal normal normal 18px/1 FontAwesome;
+	color: #000000;
+}
+.item>.inner>.check{
+	display: table-cell;
+	vertical-align:middle;
+	line-height: 1em;
+	width:32px;
+	position:relative;
+}
+.item>.inner>.buttons{
+	display: table-cell;
+	vertical-align:middle;
+	width:1%;
+	white-space:nowrap;
+	line-height:10px;
+	padding-top:1px;
+	padding-bottom:1px;
+	position:relative;
+}
+.item>.inner>.buttons>a{
+	width: 28px;
+    height: 28px;
+    display: inline-block;
+    background: #F2EDEF;
+    border-radius: 4px;
+    position: relative;
+    margin-left: 4px;
+    overflow: hidden;
+	font-size: 17px;
+	color: #525254;
+	text-align:center;
+	line-height:27px;
+}
+.item.selected>.inner>.buttons>a{
+    background: #FFFFFF;
+}
+.item>.inner>.buttons>a:last-child,.item>.inner>.buttons>div:last-child{
+    margin-right: 4px;
+}
+.item>.inner>.buttons>a:hover {
+    background-color: #dcdcdc;
+}
+.item>.inner>.buttons>div{
+	width: 28px;
+    height: 28px;
+    display: inline-block;
+    margin-left: 4px;
+}
+.item>.inner>.icon{
+	display: table-cell;
+	vertical-align:middle;
+	width:30px;
+	padding-right:4px;
+	white-space:nowrap;
+	line-height:10px;
+	padding-top:1px;
+	padding-bottom:1px;
+	font-size: 24px;
+	text-align:center;
+	color:#444444;
+	position:relative;
+}
+.item>.inner>.col>.inner>.title{
+    color: #666666;
+    font-size: 14px;
+	line-height: 14px;
+	padding:1px 0px;
+	display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.item>.inner>.col>.inner>.title>a {
+    text-decoration: none;
+    color: #666666;
+    font-size: 14px;
+}
+.item>.inner>.col>.inner>.subTitle{
+    color: #c6c6c6;
+    font-size: 12px;
+	line-height: 14px;
+	display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.item>.inner>.col>.inner>.subTitle>a {
+    text-decoration: none;
+    color: #c6c6c6;
+    font-size: 11px;
+}
+.item .date{
+    color: #c6c6c6;
+    font-size: 12px;
+	line-height: 14px;
+	display: block;
+	float:right;
+	padding-right: 6px;
+	padding-left: 6px;
+}
